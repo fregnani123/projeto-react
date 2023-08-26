@@ -18,8 +18,9 @@ function Home() {
    }
   
   return (
-     <div>
-     
+    <body>
+      <img className='purchaseImage' src={purchaseImage}/>
+     <div className='container'>
       <h1>Lista de compras </h1>
       <input placeholder='produtos' ref={inputRef}/>
       <button onClick={adicionar}>adicionar</button>
@@ -31,9 +32,8 @@ function Home() {
        ))     
           
       }
-
-      
-    </div>
+      </div>
+    </body>
   )
 }
 
