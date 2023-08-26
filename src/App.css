@@ -1,5 +1,6 @@
 h1 {
-  font-size: 20px;
+  font-size: 50px;
+  color: azure;
 }
 
 .lixeira{
@@ -17,5 +18,24 @@ h1 {
 }
 
 .container{
-  
+  width: 400px;
+  background-color: rgba(111, 0, 255, 0.767);
+  display: block;
+  text-align: center;
+  padding: 20px;
+  margin: auto;
 }
+
+input{
+    border: 2px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+  }
+
+input:focus {
+    border-color: #007bff;
+    /* Mudar a cor da borda ao focar no input */
+  }
