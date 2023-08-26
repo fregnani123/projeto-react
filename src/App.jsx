@@ -8,14 +8,20 @@ function Home() {
     const [produtos, setProdutos] = useState([])
     const inputRef = useRef()
 
+  function inputVazio() {
+    return !inputRef.current.value.trim();
+  }
+
   function limparInput() {
     inputRef.current.value = "";
    }
   
-    function adicionar() {
-      setProdutos([{ id: v4(), nome: inputRef.current.value }, ...produtos]) 
-      limparInput()
+  function adicionar() {
+    if (!inputVazio()) {
+      setProdutos([{ id: v4(), nome: inputRef.current.value }, ...produtos]);
+      limparInput();
     }
+  }
   
   function deletaProduto(id) {
       setProdutos(produtos.filter(produto => produto.id !== id))
@@ -31,7 +37,7 @@ function Home() {
     
       {
         produtos.map(produto => (
-          <div key={produto.id}><p>{produto.nome}<button className='lixeira' onClick={()=> deletaProduto(produto.id)}>🗑️</button ></p></div>
+          <div key={produto.id}><p>{produto.nome}<button className='bin' onClick={()=> deletaProduto(produto.id)}>🗑️</button ></p></div>
           
        ))     
           
