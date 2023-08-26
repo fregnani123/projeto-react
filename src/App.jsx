@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react'
 import './App.css'
-import {v4} from 'uuid'
+import { v4 } from 'uuid'
+import purchaseImage from  '../public/image/compras.png'
 
 function Home() {
 
