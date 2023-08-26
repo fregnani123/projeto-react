@@ -12,9 +12,9 @@ function App() {
       setProdutos([{ id: v4(), nome: inputRef.current.value }, ...produtos]) 
     }
   
-  // function deletar(produto) {
-      
-  // }
+  function deletaProduto(id) {
+      setProdutos(produtos.filter(produto => produto.id !== id))
+   }
   
   return (
      <div>
@@ -25,7 +25,7 @@ function App() {
     
       {
         produtos.map(produto => (
-          <div key={produto.id}><p>{produto.nome}<button className='lixeira'>🗑️</button></p></div>
+          <div key={produto.id}><p>{produto.nome}<button className='lixeira' onClick={()=> deletaProduto(produto.id)}>🗑️</button ></p></div>
           
        ))     
           
