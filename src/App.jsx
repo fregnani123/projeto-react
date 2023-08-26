@@ -2,7 +2,7 @@ import { useRef, useState } from 'react'
 import './App.css'
 import {v4} from 'uuid'
 
-function App() {
+function Home() {
 
     const [produtos, setProdutos] = useState([])
     const inputRef = useRef()
@@ -36,4 +36,4 @@ function App() {
   )
 }
 
-export default App
+export default Home
